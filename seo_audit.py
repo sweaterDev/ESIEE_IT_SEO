@@ -1,6 +1,6 @@
 #Retourne un dictionnaire de mots présent dans un text ainsi que ses occuerences
+# arg un texte
 # compléxité en temps O(n),complexité en espace O(m).
-# args un texte
 def compter_mots_occurences(texte):
     mots = texte.lower().split()
     print(mots)
@@ -11,7 +11,9 @@ def compter_mots_occurences(texte):
 
     return sorted(occurrences.items(), key=lambda x: x[1], reverse=True)
 
-   
+#Retourne une copie d'un dictionnaire sans ses mots parasites qu'on aura définie
+# args dictionnaire cible , listes mots parasites
+# compléxité en temps O(n),complexité en espace O(m).
 def filtrer_mots_parasites(dict_avec_parasites, mots_parasites):
     # Créer une copie de la structure de données pour éviter de modifier l'original
     occurrences = dict(dict_avec_parasites)
