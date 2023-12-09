@@ -5,7 +5,6 @@ import csv
 # compléxité en temps O(n),complexité en espace O(m).
 def compter_mots_occurences(texte):
     mots = texte.lower().split()
-    print(mots)
     occurrences = {}
     
     for mot in mots:
@@ -38,3 +37,7 @@ def lire_mots_parasites(fichier_csv):
             mots_parasites.extend(ligne)
 
     return mots_parasites
+#Etape 4 
+#text ="Etape 9 : Créer une fonction prenant en paramètre une chaine de caractère représentant un nom de domaine, et une liste de valeurs qui sont des url et qui retourne deux listes avec les url qui font partie du domaine et ceux qui n’en font pas partie."
+#fichier ="parasite.csv"
+#print(filtrer_mots_parasites(compter_mots_occurences(text),lire_mots_parasites(fichier)))
