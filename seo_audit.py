@@ -48,7 +48,7 @@ def supprimer_balises_html(html):
 
     return texte_sans_balises
 
-#Etape 4 
+#Test Etape 4 
 #text ="Etape 9 : Créer une fonction prenant en paramètre une chaine de caractère représentant un nom de domaine, et une liste de valeurs qui sont des url et qui retourne deux listes avec les url qui font partie du domaine et ceux qui n’en font pas partie."
 #fichier ="parasite.csv"
 #print(filtrer_mots_parasites(compter_mots_occurences(text),lire_mots_parasites(fichier)))
