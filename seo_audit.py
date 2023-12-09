@@ -9,8 +9,15 @@ def compter_mots_occurences(texte):
     for mot in mots:
         occurrences[mot] = occurrences.get(mot, 0) + 1
 
-    mots_occurrences_tries = sorted(occurrences.items(), key=lambda x: x[1], reverse=True)
-
-    return mots_occurrences_tries
+    return sorted(occurrences.items(), key=lambda x: x[1], reverse=True)
 
    
+def filtrer_mots_parasites(dict_avec_parasites, mots_parasites):
+    # Créer une copie de la structure de données pour éviter de modifier l'original
+    occurrences = dict(dict_avec_parasites)
+
+    # Supprimer les mots parasites du dictionnaire
+    for mot_parasite in mots_parasites:
+        occurrences.pop(mot_parasite, None)
+
+    return occurrences
