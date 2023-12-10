@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="fr" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bienvenue dans la documentation du mini projet audit seo ! &#8212; Documentation audit_seo 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=7a28dfa3"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=d99ca74e"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="bienvenue-dans-la-documentation-du-mini-projet-audit-seo">
+<h1>Bienvenue dans la documentation du mini projet audit seo !<a class="headerlink" href="#bienvenue-dans-la-documentation-du-mini-projet-audit-seo" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py function" id="module-parasiteFilter">
+<dt class="sig sig-object py" id="parasiteFilter.filtrer_mots_parasites">
+<span class="sig-prename descclassname"><span class="pre">parasiteFilter.</span></span><span class="sig-name descname"><span class="pre">filtrer_mots_parasites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_avec_parasites</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mots_parasites</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parasiteFilter.filtrer_mots_parasites" title="Link to this definition">¶</a></dt>
+<dd><p>Filtre les mots parasites d’un dictionnaire d’occurrences de mots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dict_avec_parasites</strong> – Le dictionnaire d’occurrences de mots.</p></li>
+<li><p><strong>mots_parasites</strong> – La liste des mots parasites à filtrer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Un nouveau dictionnaire sans les mots parasites.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="parasiteFilter.lire_mots_parasites">
+<span class="sig-prename descclassname"><span class="pre">parasiteFilter.</span></span><span class="sig-name descname"><span class="pre">lire_mots_parasites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fichier_csv</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#parasiteFilter.lire_mots_parasites" title="Link to this definition">¶</a></dt>
+<dd><p>Lit les mots parasites à partir d’un fichier CSV.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fichier_csv</strong> – Le chemin vers le fichier CSV.</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Une liste de mots parasites.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p id="module-wordCounter">Module Word Counter</p>
+<p>Ce module contient des fonctions pour compter les occurrences des mots dans un texte.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="wordCounter.compter_occurrences_mots">
+<span class="sig-prename descclassname"><span class="pre">wordCounter.</span></span><span class="sig-name descname"><span class="pre">compter_occurrences_mots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">texte</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wordCounter.compter_occurrences_mots" title="Link to this definition">¶</a></dt>
+<dd><p>Compte les occurrences des mots dans un texte.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>texte</strong> – Le texte à analyser.</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Une liste de tuples contenant les mots et leur nombre d’occurrences, triée par fréquence.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-htmlParser">
+<dt class="sig sig-object py" id="htmlParser.extraire_nom_domaine">
+<span class="sig-prename descclassname"><span class="pre">htmlParser.</span></span><span class="sig-name descname"><span class="pre">extraire_nom_domaine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#htmlParser.extraire_nom_domaine" title="Link to this definition">¶</a></dt>
+<dd><p>Extrait le nom de domaine à partir d’une URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – L’URL à analyser.</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le nom de domaine extrait.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="htmlParser.extraire_valeurs_balises">
+<span class="sig-prename descclassname"><span class="pre">htmlParser.</span></span><span class="sig-name descname"><span class="pre">extraire_valeurs_balises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nom_balise</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nom_attribut</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#htmlParser.extraire_valeurs_balises" title="Link to this definition">¶</a></dt>
+<dd><p>Extrait les valeurs associées à une balise et un attribut spécifiques.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>html</strong> – La chaîne HTML à analyser.</p></li>
+<li><p><strong>nom_balise</strong> – Le nom de la balise à rechercher.</p></li>
+<li><p><strong>nom_attribut</strong> – Le nom de l’attribut à extraire.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Une liste des valeurs extraites.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="htmlParser.filtrer_urls_par_domaine">
+<span class="sig-prename descclassname"><span class="pre">htmlParser.</span></span><span class="sig-name descname"><span class="pre">filtrer_urls_par_domaine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nom_domaine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">liste_urls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#htmlParser.filtrer_urls_par_domaine" title="Link to this definition">¶</a></dt>
+<dd><p>Filtre les URLs en fonction d’un nom de domaine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nom_domaine</strong> – Le nom de domaine à utiliser pour le filtrage.</p></li>
+<li><p><strong>liste_urls</strong> – La liste des URLs à filtrer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Deux listes, une avec les URLs du domaine et une avec les URLs hors du domaine.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="htmlParser.recuperer_texte_html">
+<span class="sig-prename descclassname"><span class="pre">htmlParser.</span></span><span class="sig-name descname"><span class="pre">recuperer_texte_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#htmlParser.recuperer_texte_html" title="Link to this definition">¶</a></dt>
+<dd><p>Récupère le texte HTML d’une page à partir de son URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – L’URL de la page.</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le texte HTML récupéré.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="htmlParser.supprimer_balises_html">
+<span class="sig-prename descclassname"><span class="pre">htmlParser.</span></span><span class="sig-name descname"><span class="pre">supprimer_balises_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#htmlParser.supprimer_balises_html" title="Link to this definition">¶</a></dt>
+<dd><p>Supprime les balises HTML d’une chaîne HTML.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>html</strong> – La chaîne HTML à traiter.</p>
+</dd>
+<dt class="field-even">Renvoie<span class="colon">:</span></dt>
+<dd class="field-even"><p>Le texte sans balises.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">audit_seo</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, smercellus.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

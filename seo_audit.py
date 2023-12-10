@@ -1,6 +1,6 @@
-from word_counter import compter_occurrences_mots
-from parasite_filter import filtrer_mots_parasites, lire_mots_parasites
-from html_parser import supprimer_balises_html, extraire_valeurs_balises, extraire_nom_domaine, filtrer_urls_par_domaine, recuperer_texte_html
+from wordCounter import compter_occurrences_mots
+from parasiteFilter import filtrer_mots_parasites, lire_mots_parasites
+from htmlParser import supprimer_balises_html, extraire_valeurs_balises, extraire_nom_domaine, filtrer_urls_par_domaine, recuperer_texte_html
 
 def audit_page(url):
     # Récupérer le texte HTML de la page
