@@ -1,5 +1,7 @@
 import csv
+#pip install bs4
 from bs4 import BeautifulSoup
+from urllib.parse import urlparse
 
 #Retourne un dictionnaire de mots présent dans un text ainsi que ses occuerences
 # arg un texte
@@ -65,6 +67,16 @@ def extraire_valeurs_balises(html, nom_balise, nom_attribut):
             valeurs.append(valeur_attribut)
 
     return valeurs
+#extrait le nom de domaine d'une url
+#arg url du nom de domaine à extraire
+def extraire_nom_domaine(url):
+    # Analyser l'URL avec urlparse
+    composants = urlparse(url)
+
+    # Extraire le nom de domaine
+    nom_domaine = composants.netloc
+
+    return nom_domaine
 
 #Test Etape 4 
 #text ="Etape 9 : Créer une fonction prenant en paramètre une chaine de caractère représentant un nom de domaine, et une liste de valeurs qui sont des url et qui retourne deux listes avec les url qui font partie du domaine et ceux qui n’en font pas partie."
@@ -85,23 +97,23 @@ def extraire_valeurs_balises(html, nom_balise, nom_attribut):
 #print(supprimer_balises_html(html_exemple))
 
 # Test Etape 6
-html_exemple = """
-<html>
-  <head>
-    <title>Exemple HTML</title>
-  </head>
-  <body>
-    <a href="https://example.com">Website</a>
-    <a href="mailto:m.bluth@example.com">Email</a>
-    <p class="paragraphe">Troisième valeur</p>
-  </body>
-</html>
-"""
+#html_exemple = """
+#<html>
+ # <head>
+  #  <title>Exemple HTML</title>
+  #</head>
+ # <body>
+   # <a href="https://example.com">Website</a>
+  #  <a href="mailto:m.bluth@example.com">Email</a>
+   # <p class="paragraphe">Troisième valeur</p>
+ # </body>
+#</html>
+#"""
 
-nom_balise_exemple = 'a'
-nom_attribut_exemple = 'href'
+#nom_balise_exemple = 'a'
+#nom_attribut_exemple = 'href'
 
-resultat = extraire_valeurs_balises(html_exemple, nom_balise_exemple, nom_attribut_exemple)
+#resultat = extraire_valeurs_balises(html_exemple, nom_balise_exemple, nom_attribut_exemple)
 
 # Afficher le résultat
-print(resultat)
+print(extraire_nom_domaine("https://kinsta.com/fr/blog/commentaires-python/"))
