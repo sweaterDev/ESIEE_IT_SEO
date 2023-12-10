@@ -47,6 +47,24 @@ def supprimer_balises_html(html):
     texte_sans_balises = soup.get_text(separator=' ', strip=True)
 
     return texte_sans_balises
+#Retourne une liste de valeurs associées aux balises.
+#args Code html, nom de la balise cible, nom de l'attribut cible
+def extraire_valeurs_balises(html, nom_balise, nom_attribut):
+    valeurs = []
+
+    # Analyser le HTML avec BeautifulSoup
+    soup = BeautifulSoup(html, 'html.parser')
+
+    # Trouver toutes les balises spécifiées avec l'attribut correspondant
+    balises = soup.find_all(nom_balise)
+
+    # Extraire les valeurs associées à l'attribut spécifié
+    for balise in balises:
+        valeur_attribut = balise.get(nom_attribut)
+        if valeur_attribut is not None:
+            valeurs.append(valeur_attribut)
+
+    return valeurs
 
 #Test Etape 4 
 #text ="Etape 9 : Créer une fonction prenant en paramètre une chaine de caractère représentant un nom de domaine, et une liste de valeurs qui sont des url et qui retourne deux listes avec les url qui font partie du domaine et ceux qui n’en font pas partie."
@@ -65,3 +83,25 @@ def supprimer_balises_html(html):
 #</html>
 #"""
 #print(supprimer_balises_html(html_exemple))
+
+# Test Etape 6
+html_exemple = """
+<html>
+  <head>
+    <title>Exemple HTML</title>
+  </head>
+  <body>
+    <a href="https://example.com">Website</a>
+    <a href="mailto:m.bluth@example.com">Email</a>
+    <p class="paragraphe">Troisième valeur</p>
+  </body>
+</html>
+"""
+
+nom_balise_exemple = 'a'
+nom_attribut_exemple = 'href'
+
+resultat = extraire_valeurs_balises(html_exemple, nom_balise_exemple, nom_attribut_exemple)
+
+# Afficher le résultat
+print(resultat)
