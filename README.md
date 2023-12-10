@@ -25,9 +25,9 @@ Ce projet vise à fournir des outils d'audit SEO pour analyser le contenu des pa
 
 ## Structure du Projet
 
-- `word_counter.py`: Module pour compter les occurrences de mots.
-- `parasite_filter.py`: Module pour filtrer les mots parasites.
-- `html_parser.py`: Module pour analyser le HTML et extraire des informations.
+- `wordCounter.py`: Module pour compter les occurrences de mots.
+- `parasiteFilter.py`: Module pour filtrer les mots parasites.
+- `htmlParser.py`: Module pour analyser le HTML et extraire des informations.
 
 ## Auteurs
 
