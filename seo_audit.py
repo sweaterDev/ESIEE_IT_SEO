@@ -1,3 +1,5 @@
+#pip install requests
+import requests
 import csv
 #pip install bs4
 from bs4 import BeautifulSoup
@@ -70,13 +72,46 @@ def extraire_valeurs_balises(html, nom_balise, nom_attribut):
 #extrait le nom de domaine d'une url
 #arg url du nom de domaine à extraire
 def extraire_nom_domaine(url):
-    # Analyser l'URL avec urlparse
-    composants = urlparse(url)
 
-    # Extraire le nom de domaine
-    nom_domaine = composants.netloc
+    return urlparse(url).netloc
 
-    return nom_domaine
+def filtrer_urls_par_domaine(nom_domaine, liste_urls):
+    urls_du_domaine = []
+    urls_hors_domaine = []
+
+    # Analyser le nom de domaine
+    composants_domaine = urlparse("http://" + nom_domaine)
+    domaine_base = composants_domaine.netloc.lower()
+
+    for url in liste_urls:
+        # Analyser l'URL
+        composants_url = urlparse(url)
+        domaine_url = composants_url.netloc.lower()
+
+        # Comparer les domaines
+        if domaine_url == domaine_base:
+            urls_du_domaine.append(url)
+        else:
+            urls_hors_domaine.append(url)
+
+    return urls_du_domaine, urls_hors_domaine
+
+def recuperer_texte_html(url):
+    try:
+        # Effectuer la requête HTTP pour récupérer le contenu de la page
+        print("récupération des infos de la page")
+        reponse = requests.get(url)
+        print("fait !")
+        # Vérifier si la requête a réussi (statut 200 OK)
+        if reponse.status_code == 200:
+            return reponse.text
+        else:
+            print(f"Erreur de requête HTTP. Statut : {reponse.status_code}")
+            return None
+
+    except requests.RequestException as e:
+        print(f"Erreur lors de la requête HTTP : {e}")
+        return None
 
 #Test Etape 4 
 #text ="Etape 9 : Créer une fonction prenant en paramètre une chaine de caractère représentant un nom de domaine, et une liste de valeurs qui sont des url et qui retourne deux listes avec les url qui font partie du domaine et ceux qui n’en font pas partie."
@@ -117,3 +152,4 @@ def extraire_nom_domaine(url):
 
 # Afficher le résultat
 print(extraire_nom_domaine("https://kinsta.com/fr/blog/commentaires-python/"))
+print(recuperer_texte_html("https://esiee-it.blackboard.com/ultra/courses/_101859_1/outline/edit/document/_1173113_1?courseId=_101859_1&view=content"))
