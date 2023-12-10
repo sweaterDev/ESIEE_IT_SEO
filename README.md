@@ -36,4 +36,5 @@ Ce projet vise à fournir des outils d'audit SEO pour analyser le contenu des pa
 ## Licence
 
 Ce projet est sous licence [insérez la licence de votre choix].
-
+## Version
+1.0
